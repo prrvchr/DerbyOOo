@@ -1,0 +1,14 @@
+namespace: DerbyOOo
+output:
+  file_path: ./Fluid-Attacks-Results.csv
+  format: CSV
+working_dir: .
+sast:
+  include:
+    - glob(source/DerbyOOo/service/*.py)
+    - glob(source/DerbyOOo/service/pythonpath/derby/*)
+sca:
+  include:
+    - .
+language: EN
+strict: true
