@@ -28,7 +28,7 @@
 """
 
 # General configuration
-g_dbname = 'Derby'
+g_catalog = g_dbname = 'Derby'
 g_extension = '%sOOo' % g_dbname
 g_identifier = 'io.github.prrvchr.%s' % g_extension
 g_resource = 'resource'
@@ -38,8 +38,8 @@ g_errorlog = '%sError'  % g_dbname
 
 # DataBase configuration
 g_protocol = 'xdbc:derby:'
-g_url = 'sdbc:embedded:derby'
-g_user = 'SA'
-g_options = ';create=true'
+g_url = 'sdbc:embedded:hsqldb'
+g_user = ''
+g_options = ';create=true;user=SA;password='
 g_shutdown = ''
 

@@ -34,9 +34,9 @@ from com.sun.star.awt import XContainerWindowEventHandler
 
 from com.sun.star.lang import XServiceInfo
 
-from hypersql import OptionsManager
+from derby import OptionsManager
 
-from hypersql import g_identifier
+from derby import g_identifier
 
 import traceback
 

@@ -32,12 +32,12 @@ import unohelper
 
 from com.sun.star.lang import XServiceInfo
 
-from hypersql import sdbc
-from hypersql import sdbcx
+from derby import sdbc
+from derby import sdbcx
 
-from hypersql import getConfiguration
+from derby import getConfiguration
 
-from hypersql import g_identifier
+from derby import g_identifier
 
 from threading import Lock
 import traceback
@@ -55,9 +55,9 @@ class Driver(unohelper.Base,
                 if cls._instance is None:
                     service = getConfiguration(ctx, g_identifier).getByName('DriverService')
                     if service == 'io.github.prrvchr.jdbcdriver.sdbc.Driver':
-                        instance = sdbc.Driver(ctx, cls._lock, service, g_ImplementationName)
+                        instance = sdbc.Driver(ctx, cls._lock, service, g_ImplementationName, 7)
                     else:
-                        instance = sdbcx.Driver(ctx, cls._lock, service, g_ImplementationName)
+                        instance = sdbcx.Driver(ctx, cls._lock, service, g_ImplementationName, 7)
                     cls._instance = instance
         return cls._instance
 
