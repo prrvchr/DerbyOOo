@@ -29,7 +29,7 @@
 
 **The use of this software subjects you to our [Terms Of Use][4].**
 
-# version [1.0.0][5]
+# version [1.1.0][5]
 
 ## Introduction:
 
@@ -53,8 +53,9 @@ ___
 The DerbyOOo extension uses the jdbcDriverOOo extension to work.  
 It must therefore meet the [requirement of the jdbcDriverOOo extension][14].
 
-This extension cannot be installed together with the [HyperSQLOOo][15] extension.  
-It's one or the other, but at the moment they can't work together (see [issue #156471][16]).
+**Since version 1.1.0, only LibreOffice 24.2.x or higher is supported.**
+If it is not possible for you to use such a version, use the previous version of DerbyOOo. But in this case, this extension cannot be installed with the [HyperSQLOOo][15] extension, see [bug #156471][16].
+In addition, it will be difficult for you to migrate odb files created under lower versions of DerbyOOo. I recommend using LibreOffice 24.2.x minimum with DerbyOOo 1.1.0 or higher.
 
 **On Linux and macOS the Python packages** used by the extension, if already installed, may come from the system and therefore **may not be up to date**.  
 To ensure that your Python packages are up to date it is recommended to use the **System Info** option in the extension Options accessible by:  
@@ -71,7 +72,7 @@ If necessary, rename it before installing it.
 
 - [![jdbcDriverOOo logo][17]][18] Install **[jdbcDriverOOo.oxt][19]** extension [![Version][20]][19]
 
-    This extension is necessary to use SQLite version 3.42.0.0 with all its features.
+    This extension is necessary to use Apache Derby with all its features.
 
 - ![DerbyOOo logo][21] Install **[DerbyOOo.oxt][22]** extension [![Version][23]][22]
 
@@ -142,7 +143,12 @@ ___
 
 - Implementation of a new format in odb files allowing the name of the catalog of the underlying database to be taken into account.
 
-### What remains to be done for version 1.0.0:
+### What has been done for version 1.1.0:
+
+- This version is based on [fix #154989][32] available since LibreOffice 24.2.x. It can therefore work with other extensions offering integrated database services.
+- Now DerbyOOo requires LibreOffice 24.2.x minimum and will load for the url: `sdbc:embedded:derby`.
+
+### What remains to be done for version 1.1.0:
 
 - Add new language for internationalization...
 
@@ -170,7 +176,7 @@ ___
 [20]: <https://img.shields.io/github/v/tag/prrvchr/jdbcDriverOOo?label=latest#right>
 [21]: <img/DerbyOOo.svg#middle>
 [22]: <https://github.com/prrvchr/DerbyOOo/releases/latest/download/DerbyOOo.oxt>
-[23]: <https://img.shields.io/github/downloads/prrvchr/DerbyOOo/latest/total?label=v1.0.0#right>
+[23]: <https://img.shields.io/github/downloads/prrvchr/DerbyOOo/latest/total?label=v1.1.0#right>
 [24]: <img/DerbyOOo-1.png>
 [25]: <img/DerbyOOo-2.png>
 [26]: <img/DerbyOOo-3.png>
@@ -179,3 +185,4 @@ ___
 [29]: <https://github.com/prrvchr/DerbyOOo/blob/main/uno/lib/uno/embedded/documenthandler.py>
 [30]: <https://www.openoffice.org/api/docs/common/ref/com/sun/star/util/XCloseListener.html>
 [31]: <http://www.openoffice.org/api/docs/common/ref/com/sun/star/document/XStorageChangeListener.html>
+[32]: <https://gerrit.libreoffice.org/c/core/+/154989>

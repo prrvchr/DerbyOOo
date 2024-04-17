@@ -38,9 +38,12 @@ g_errorlog = '%sError'  % g_dbname
 
 # DataBase configuration
 g_protocol = 'xdbc:derby:'
-g_url = 'sdbc:embedded:hsqldb'
+g_url = 'sdbc:embedded:derby'
 g_user = ''
 g_options = ';user=SA'
 g_create = ';create=true'
 g_exist = ''
+
+# LibreOffice configuration
+g_lover = '24.2'
 
