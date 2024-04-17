@@ -32,7 +32,7 @@
         <OpenOffice.org-minimal-version value="4.1" d:name="OpenOffice.org 4.1"/>
     </dependencies>
     <update-information>
-        <src xlink:href="https://prrvchr.github.io/DerbyOOo/DerbyOOo.update.xml"/>
+        <src xlink:href="https://github.com/prrvchr/DerbyOOo/releases/latest/download/DerbyOOo.update.xml"/>
     </update-information>
     <publisher>
         <name xlink:href="https://prrvchr.github.io/DerbyOOo/" lang="en-US">Embedded Apache Derby driver for LibreOffice</name>

@@ -40,6 +40,7 @@ g_errorlog = '%sError'  % g_dbname
 g_protocol = 'xdbc:derby:'
 g_url = 'sdbc:embedded:hsqldb'
 g_user = ''
-g_options = ';create=true;user=SA;password='
-g_shutdown = ''
+g_options = ';user=SA'
+g_create = ';create=true'
+g_exist = ''
 
