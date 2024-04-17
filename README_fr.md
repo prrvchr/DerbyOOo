@@ -110,16 +110,16 @@ ___
 ## Comment ça marche:
 
 DerbyOOo est un service [com.sun.star.sdbc.Driver][27] UNO écrit en Python.  
-Il s'agit d'une surcouche à l'extension [jdbcDriverOOo][18] permettant de stocker la base de données SQLite dans un fichier odb (qui est, en fait, un fichier compressé).
+Il s'agit d'une surcouche à l'extension [jdbcDriverOOo][18] permettant de stocker la base de données Derby dans un fichier odb (qui est, en fait, un fichier compressé).
 
 Son fonctionnement est assez basique, à savoir:
 
-- Lors d'une demande de connexion, trois choses sont faites:
-    1. S'il n'existe pas déjà, un **sous-répertoire** avec le nom: `.` + `nom_du_fichier_odb` + `.lck` est créé à l'emplacement du fichier odb dans lequel tous les fichiers SQLite sont extraits du répertoire **database** du fichier odb (décompression).
-    2. Un [DocumentHandler][28] est ajouté en tant que [com.sun.star.util.XCloseListener][29] et [com.sun.star.document.XStorageChangeListener][30] au fichier odb.
-    3. L'extension [jdbcDriverOOo][18] est utilisée pour obtenir l'interface [com.sun.star.sdbc.XConnection][32] à partir du chemin du **sous-répertoire** + `nom_du_fichier_odb`.
-
-- Lors de la fermeture ou du renommage (Enregistrer sous) d'un fichier odb, le [DocumentHandler][28] copie tous les fichiers présents dans le **sous-répertoire** dans le (nouveau) répertoire **database** du fichier odb (compression) puis supprime le **sous-répertoire**.
+- Lors d'une demande de connexion, plusieurs choses sont faites:
+  - S'il n'existe pas déjà, un **sous-répertoire** avec le nom: `.` + `nom_du_fichier_odb` + `.lck` est créé à l'emplacement du fichier odb dans lequel tous les fichiers Derby sont extraits du répertoire **database** du fichier odb (décompression).
+  - L'extension [jdbcDriverOOo][18] est utilisée pour obtenir l'interface [com.sun.star.sdbc.XConnection][28] à partir du chemin du **sous-répertoire** + `Derby`.
+  - Si la connexion réussi, un [DocumentHandler][29] est ajouté en tant que [com.sun.star.util.XCloseListener][30] et [com.sun.star.document.XStorageChangeListener][31] au fichier odb.
+  - Si la connexion échoue et que les fichiers ont été extraits lors de la phase 1, le **sous-répertoire** est supprimé.
+- Lors de la fermeture ou du changement de nom (Enregistrer sous) du fichier odb, si la connexion a réussi, le [DocumentHandler][29] copie tous les fichiers présents dans le **sous-répertoire** dans le (nouveau) répertoire **database** du fichier odb (zip), puis supprime le **sous-répertoire**.
 
 ___
 
@@ -172,8 +172,7 @@ ___
 [25]: <img/DerbyOOo-2_fr.png>
 [26]: <img/DerbyOOo-3_fr.png>
 [27]: <https://www.openoffice.org/api/docs/common/ref/com/sun/star/sdbc/Driver.html>
-[28]: <https://github.com/prrvchr/DerbyOOo/blob/main/uno/lib/uno/embedded/documenthandler.py>
-[29]: <https://www.openoffice.org/api/docs/common/ref/com/sun/star/util/XCloseListener.html>
-[30]: <http://www.openoffice.org/api/docs/common/ref/com/sun/star/document/XStorageChangeListener.html>
-[31]: <https://www.openoffice.org/api/docs/common/ref/com/sun/star/sdbc/XConnection.html>
-[
+[28]: <https://www.openoffice.org/api/docs/common/ref/com/sun/star/sdbc/XConnection.html>
+[29]: <https://github.com/prrvchr/DerbyOOo/blob/main/uno/lib/uno/embedded/documenthandler.py>
+[30]: <https://www.openoffice.org/api/docs/common/ref/com/sun/star/util/XCloseListener.html>
+[31]: <http://www.openoffice.org/api/docs/common/ref/com/sun/star/document/XStorageChangeListener.html>

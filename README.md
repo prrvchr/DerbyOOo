@@ -110,16 +110,16 @@ ___
 ## How does it work:
 
 DerbyOOo is an [com.sun.star.sdbc.Driver][27] UNO service written in Python.  
-It is an overlay to the [jdbcDriverOOo][18] extension allowing to store the SQLite database in an odb file (which is, in fact, a compressed file).
+It is an overlay to the [jdbcDriverOOo][18] extension allowing to store the Derby database in an odb file (which is, in fact, a compressed file).
 
 Its operation is quite basic, namely:
 
-- When requesting a connection, three things are done:
-    1. If it does not already exist, a **subdirectory** with name: `.` + `odb_file_name` + `.lck` is created in the location of the odb file where all SQLite files are extracted from the **database** directory of the odb file (unzip).
-    2. A [DocumentHandler][28] is added as an [com.sun.star.util.XCloseListener][29] and [com.sun.star.document.XStorageChangeListener][30] to the odb file.
-    3. The [jdbcDriverOOo][18] extension is used to get the [com.sun.star.sdbc.XConnection][31] interface from the **subdirectory** path + `odb_file_name`.
-
-- When closing or renaming (Save as) an odb file the [DocumentHandler][28] copy all the files present in the **subdirectory** into the (new) **database** directory of the odb file (zip) and then delete the **subdirectory**.
+- When requesting a connection, several things are done:
+  - If it does not already exist, a **subdirectory** with name: `.` + `odb_file_name` + `.lck` is created in the location of the odb file where all Derby files are extracted from the **database** directory of the odb file (unzip).
+  - The [jdbcDriverOOo][18] extension is used to get the [com.sun.star.sdbc.XConnection][28] interface from the **subdirectory** path + `Derby`.
+  - If the connection is successful, a [DocumentHandler][29] is added as an [com.sun.star.util.XCloseListener][30] and [com.sun.star.document.XStorageChangeListener][31] to the odb file.
+  - If the connection is unsuccessful and the files was extracted in phase 1, the **subdirectory** will be deleted.
+- When closing or renaming (Save As) the odb file, if the connection was successful, the [DocumentHandler][29] copies all files present in the **subdirectory** into the (new) **database** directory of the odb file (zip), then delete the **subdirectory**.
 
 ___
 
@@ -172,7 +172,7 @@ ___
 [25]: <img/DerbyOOo-2.png>
 [26]: <img/DerbyOOo-3.png>
 [27]: <https://www.openoffice.org/api/docs/common/ref/com/sun/star/sdbc/Driver.html>
-[28]: <https://github.com/prrvchr/DerbyOOo/blob/main/uno/lib/uno/embedded/documenthandler.py>
-[29]: <https://www.openoffice.org/api/docs/common/ref/com/sun/star/util/XCloseListener.html>
-[30]: <http://www.openoffice.org/api/docs/common/ref/com/sun/star/document/XStorageChangeListener.html>
-[31]: <https://www.openoffice.org/api/docs/common/ref/com/sun/star/sdbc/XConnection.html>
+[28]: <https://www.openoffice.org/api/docs/common/ref/com/sun/star/sdbc/XConnection.html>
+[29]: <https://github.com/prrvchr/DerbyOOo/blob/main/uno/lib/uno/embedded/documenthandler.py>
+[30]: <https://www.openoffice.org/api/docs/common/ref/com/sun/star/util/XCloseListener.html>
+[31]: <http://www.openoffice.org/api/docs/common/ref/com/sun/star/document/XStorageChangeListener.html>
