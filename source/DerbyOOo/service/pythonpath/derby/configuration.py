@@ -45,5 +45,5 @@ g_create = ';create=true'
 g_exist = ''
 
 # LibreOffice configuration
-g_lover = '24.2'
+g_lover = '5.0'
 
