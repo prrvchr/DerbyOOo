@@ -38,7 +38,7 @@ g_errorlog = '%sError'  % g_dbname
 
 # DataBase configuration
 g_protocol = 'xdbc:derby:'
-g_url = 'sdbc:embedded:derby'
+g_url = 'sdbc:embedded:hsqldb'
 g_user = ''
 g_options = ';user=SA'
 g_create = ';create=true'
