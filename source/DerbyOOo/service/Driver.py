@@ -55,9 +55,9 @@ class Driver(unohelper.Base,
                 if cls._instance is None:
                     service = getConfiguration(ctx, g_identifier).getByName('DriverService')
                     if service == 'io.github.prrvchr.jdbcdriver.sdbc.Driver':
-                        instance = sdbc.Driver(ctx, cls._lock, service, g_ImplementationName, 7)
+                        instance = sdbc.Driver(ctx, cls._lock, service, g_ImplementationName)
                     else:
-                        instance = sdbcx.Driver(ctx, cls._lock, service, g_ImplementationName, 7)
+                        instance = sdbcx.Driver(ctx, cls._lock, service, g_ImplementationName)
                     cls._instance = instance
         return cls._instance
 

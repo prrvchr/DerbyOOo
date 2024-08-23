@@ -29,7 +29,7 @@
 
 **The use of this software subjects you to our [Terms Of Use][4].**
 
-# version [1.1.1][5]
+# version [1.1.2][5]
 
 ## Introduction:
 
@@ -129,7 +129,9 @@ ___
 
 ## Has been tested with:
 
-* LibreOffice 24.2.1.2 - Ubuntu 22.04
+* LibreOffice 24.2.1.2 (x86_64)- Windows 10
+
+* LibreOffice 24.2.1.2 - Lubuntu 22.04
 
 I encourage you in case of problem :confused:  
 to create an [issue][13]  
@@ -154,7 +156,14 @@ ___
 - Updated the [Python setuptools][34] package to version 72.1.0.
 - The extension will ask you to install the jdbcDriverOOo extension in versions 1.4.2 minimum.
 
-### What remains to be done for version 1.1.1:
+### What has been done for version 1.1.2:
+
+- Fixed [issue #2][35] which appears to be a regression related to the release of JaybirdOOo. Thanks to TeddyBoomer for reporting it.
+- Updated the [Python setuptools][34] package to version 73.0.1.
+- Logging accessible in extension options now displays correctly on Windows.
+- Derby is now properly shutdown before files are recompressed into the odb file (ie: the db.lck file is no longer present in the odb file).
+
+### What remains to be done for version 1.1.2:
 
 - Add new language for internationalization...
 
@@ -182,7 +191,7 @@ ___
 [20]: <https://img.shields.io/github/v/tag/prrvchr/jdbcDriverOOo?label=latest#right>
 [21]: <img/DerbyOOo.svg#middle>
 [22]: <https://github.com/prrvchr/DerbyOOo/releases/latest/download/DerbyOOo.oxt>
-[23]: <https://img.shields.io/github/downloads/prrvchr/DerbyOOo/latest/total?label=v1.1.1#right>
+[23]: <https://img.shields.io/github/downloads/prrvchr/DerbyOOo/latest/total?label=v1.1.2#right>
 [24]: <img/DerbyOOo-1.png>
 [25]: <img/DerbyOOo-2.png>
 [26]: <img/DerbyOOo-3.png>
@@ -194,3 +203,4 @@ ___
 [32]: <https://gerrit.libreoffice.org/c/core/+/154989>
 [33]: <https://pypi.org/project/packaging/>
 [34]: <https://pypi.org/project/setuptools/>
+[35]: <https://github.com/prrvchr/HyperSQLOOo/issues/2>
