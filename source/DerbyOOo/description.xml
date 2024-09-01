@@ -53,8 +53,8 @@
         <name lang="fr-FR">DerbyOOo</name>
     </display-name>
     <icon>
-        <default xlink:href="DerbyOOo/DerbyOOo.svg"/>
-        <high-contrast xlink:href="DerbyOOo/DerbyOOo.svg"/>
+        <default xlink:href="img/DerbyOOo.svg"/>
+        <high-contrast xlink:href="img/DerbyOOo.svg"/>
     </icon>
     <extension-description>
         <src xlink:href="description/desc_en.txt" lang="en-US"/>
