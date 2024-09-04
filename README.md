@@ -29,7 +29,7 @@
 
 **The use of this software subjects you to our [Terms Of Use][4].**
 
-# version [1.1.2][5]
+# version [1.1.3][5]
 
 ## Introduction:
 
@@ -168,7 +168,12 @@ ___
 - Changes to extension options that require a restart of LibreOffice will result in a message being displayed.
 - Support for LibreOffice version 24.8.x.
 
-### What remains to be done for version 1.1.2:
+### What has been done for version 1.1.3:
+
+- Requires the latest version of **jdbcDriverOOo 1.4.4**.
+- In the extension options it is possible to define the options: **View system tables**, **Use bookmarks** and **Force SQL mode** which will be specific to this driver.
+
+### What remains to be done for version 1.1.3:
 
 - Add new language for internationalization...
 
@@ -196,7 +201,7 @@ ___
 [20]: <https://img.shields.io/github/v/tag/prrvchr/jdbcDriverOOo?label=latest#right>
 [21]: <img/DerbyOOo.svg#middle>
 [22]: <https://github.com/prrvchr/DerbyOOo/releases/latest/download/DerbyOOo.oxt>
-[23]: <https://img.shields.io/github/downloads/prrvchr/DerbyOOo/latest/total?label=v1.1.2#right>
+[23]: <https://img.shields.io/github/downloads/prrvchr/DerbyOOo/latest/total?label=v1.1.3#right>
 [24]: <img/DerbyOOo-1.png>
 [25]: <img/DerbyOOo-2.png>
 [26]: <img/DerbyOOo-3.png>

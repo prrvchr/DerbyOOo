@@ -29,7 +29,7 @@
 
 **L'utilisation de ce logiciel vous soumet à nos [Conditions d'utilisation][4].**
 
-# version [1.1.2][5]
+# version [1.1.3][5]
 
 ## Introduction:
 
@@ -168,7 +168,12 @@ ___
 - Les modifications apportées aux options d'extension, qui nécessitent un redémarrage de LibreOffice, entraîneront l'affichage d'un message.
 - Support de LibreOffice version 24.8.x.
 
-### Que reste-t-il à faire pour la version 1.1.2:
+### Ce qui a été fait pour la version 1.1.3:
+
+- Nécessite la dernière version de **jdbcDriverOOo 1.4.4**.
+- Dans les options de l'extension il est possible de définir les options: **Afficher les tables système**, **Utiliser les signets** et **Forcer le mode SQL** qui seront spécifiques à ce pilote.
+
+### Que reste-t-il à faire pour la version 1.1.3:
 
 - Ajouter de nouvelles langue pour l'internationalisation...
 
@@ -196,7 +201,7 @@ ___
 [20]: <https://img.shields.io/github/v/tag/prrvchr/jdbcDriverOOo?label=latest#right>
 [21]: <img/DerbyOOo.svg#middle>
 [22]: <https://github.com/prrvchr/DerbyOOo/releases/latest/download/DerbyOOo.oxt>
-[23]: <https://img.shields.io/github/downloads/prrvchr/DerbyOOo/latest/total?label=v1.1.2#right>
+[23]: <https://img.shields.io/github/downloads/prrvchr/DerbyOOo/latest/total?label=v1.1.3#right>
 [24]: <img/DerbyOOo-1_fr.png>
 [25]: <img/DerbyOOo-2_fr.png>
 [26]: <img/DerbyOOo-3_fr.png>
