@@ -29,7 +29,7 @@
 
 **The use of this software subjects you to our [Terms Of Use][4].**
 
-# version [1.1.4][5]
+# version [1.2.0][5]
 
 ## Introduction:
 
@@ -131,7 +131,7 @@ ___
 Normally, the extension is created with Eclipse for Java and [LOEclipse][32]. To work around Eclipse, I modified LOEclipse to allow the extension to be created with Apache Ant.  
 To create the DerbyOOo extension with the help of Apache Ant, you need to:
 - Install the [Java SDK][33] version 8 or higher.
-- Install [Apache Ant][34] version 1.9.1 or higher.
+- Install [Apache Ant][34] version 1.10.0 or higher.
 - Install [LibreOffice and its SDK][35] version 7.x or higher.
 - Clone the [DerbyOOo][36] repository on GitHub into a folder.
 - From this folder, move to the directory: `source/DerbyOOo/`
@@ -210,7 +210,7 @@ ___
 [2]: <https://prrvchr.github.io/DerbyOOo/>
 [3]: <https://prrvchr.github.io/DerbyOOo/README_fr>
 [4]: <https://prrvchr.github.io/DerbyOOo/source/DerbyOOo/registration/TermsOfUse_en>
-[5]: <https://prrvchr.github.io/DerbyOOo#what-has-been-done-for-version-114>
+[5]: <https://prrvchr.github.io/DerbyOOo#what-has-been-done-for-version-120>
 [6]: <https://prrvchr.github.io/>
 [7]: <https://www.libreoffice.org/download/download/>
 [8]: <https://www.openoffice.org/download/index.html>
@@ -228,7 +228,7 @@ ___
 [20]: <https://img.shields.io/github/v/tag/prrvchr/jdbcDriverOOo?label=latest#right>
 [21]: <img/DerbyOOo.svg#middle>
 [22]: <https://github.com/prrvchr/DerbyOOo/releases/latest/download/DerbyOOo.oxt>
-[23]: <https://img.shields.io/github/downloads/prrvchr/DerbyOOo/latest/total?label=v1.1.4#right>
+[23]: <https://img.shields.io/github/downloads/prrvchr/DerbyOOo/latest/total?label=v1.2.0#right>
 [24]: <img/DerbyOOo-1.png>
 [25]: <img/DerbyOOo-2.png>
 [26]: <img/DerbyOOo-3.png>
