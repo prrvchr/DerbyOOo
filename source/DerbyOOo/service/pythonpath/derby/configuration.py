@@ -48,5 +48,8 @@ g_path = True
 g_driver = ''
 g_shutdown = ';shutdown=true'
 
+g_disabled = ()
+g_memory = 'xdbc:derby:memory:dbversion;create=true'
+
 # LibreOffice configuration
 g_lover = '24.2'
