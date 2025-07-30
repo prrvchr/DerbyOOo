@@ -29,7 +29,7 @@
 
 **L'utilisation de ce logiciel vous soumet à nos [Conditions d'utilisation][4].**
 
-# version [1.2.1][5]
+# version [1.2.2][5]
 
 ## Introduction:
 
@@ -205,7 +205,11 @@ ___
 - De nombreuses corrections qui empêchaient le bon fonctionnement ont été apportées au pilote écrit en Python et enveloppant le pilote fourni par jdbcDriverOOo.
 - Nécessite l'extension **jdbcDriverOOo en version 1.5.1 minimum**.
 
-### Que reste-t-il à faire pour la version 1.2.1:
+### Ce qui a été fait pour la version 1.2.2:
+
+- Nécessite l'extension **jdbcDriverOOo en version 1.5.4 minimum**.
+
+### Que reste-t-il à faire pour la version 1.2.2:
 
 - Ajouter de nouvelles langue pour l'internationalisation...
 
@@ -215,7 +219,7 @@ ___
 [2]: <https://prrvchr.github.io/DerbyOOo/>
 [3]: <https://prrvchr.github.io/DerbyOOo/>
 [4]: <https://prrvchr.github.io/DerbyOOo/source/DerbyOOo/registration/TermsOfUse_fr>
-[5]: <https://prrvchr.github.io/DerbyOOo/README_fr#ce-qui-a-%C3%A9t%C3%A9-fait-pour-la-version-121>
+[5]: <https://prrvchr.github.io/DerbyOOo/README_fr#ce-qui-a-%C3%A9t%C3%A9-fait-pour-la-version-122>
 [6]: <https://prrvchr.github.io/README_fr>
 [7]: <https://fr.libreoffice.org/download/telecharger-libreoffice/>
 [8]: <https://www.openoffice.org/fr/Telecharger/>
@@ -233,7 +237,7 @@ ___
 [20]: <https://img.shields.io/github/v/tag/prrvchr/jdbcDriverOOo?label=latest#right>
 [21]: <img/DerbyOOo.svg#middle>
 [22]: <https://github.com/prrvchr/DerbyOOo/releases/latest/download/DerbyOOo.oxt>
-[23]: <https://img.shields.io/github/downloads/prrvchr/DerbyOOo/latest/total?label=v1.2.1#right>
+[23]: <https://img.shields.io/github/downloads/prrvchr/DerbyOOo/latest/total?label=v1.2.2#right>
 [24]: <img/DerbyOOo-1_fr.png>
 [25]: <img/DerbyOOo-2_fr.png>
 [26]: <img/DerbyOOo-3_fr.png>
