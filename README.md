@@ -29,7 +29,7 @@
 
 **The use of this software subjects you to our [Terms Of Use][4].**
 
-# version [1.2.2][5]
+# version [1.2.3][5]
 
 ## Introduction:
 
@@ -209,7 +209,11 @@ ___
 
 - Requires the **jdbcDriverOOo extension at least version 1.5.4**.
 
-### What remains to be done for version 1.2.2:
+### What has been done for version 1.2.3:
+
+- Requires the **jdbcDriverOOo extension at least version 1.5.7**.
+
+### What remains to be done for version 1.2.3:
 
 - Add new language for internationalization...
 
@@ -219,7 +223,7 @@ ___
 [2]: <https://prrvchr.github.io/DerbyOOo/>
 [3]: <https://prrvchr.github.io/DerbyOOo/README_fr>
 [4]: <https://prrvchr.github.io/DerbyOOo/source/DerbyOOo/registration/TermsOfUse_en>
-[5]: <https://prrvchr.github.io/DerbyOOo#what-has-been-done-for-version-122>
+[5]: <https://prrvchr.github.io/DerbyOOo#what-has-been-done-for-version-123>
 [6]: <https://prrvchr.github.io/>
 [7]: <https://www.libreoffice.org/download/download/>
 [8]: <https://www.openoffice.org/download/index.html>
@@ -237,7 +241,7 @@ ___
 [20]: <https://img.shields.io/github/v/tag/prrvchr/jdbcDriverOOo?label=latest#right>
 [21]: <img/DerbyOOo.svg#middle>
 [22]: <https://github.com/prrvchr/DerbyOOo/releases/latest/download/DerbyOOo.oxt>
-[23]: <https://img.shields.io/github/downloads/prrvchr/DerbyOOo/latest/total?label=v1.2.2#right>
+[23]: <https://img.shields.io/github/downloads/prrvchr/DerbyOOo/latest/total?label=v1.2.3#right>
 [24]: <img/DerbyOOo-1.png>
 [25]: <img/DerbyOOo-2.png>
 [26]: <img/DerbyOOo-3.png>
