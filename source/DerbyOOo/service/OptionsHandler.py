@@ -1,5 +1,5 @@
 #!
-# -*- coding: utf_8 -*-
+# -*- coding: utf-8 -*-
 
 """
 ╔════════════════════════════════════════════════════════════════════════════════════╗
@@ -35,16 +35,13 @@ from com.sun.star.awt import XContainerWindowEventHandler
 
 from com.sun.star.lang import XServiceInfo
 
-from derby import OptionsManager
+from derby.options.optionsmanager import OptionsManager
 
-from derby import getLogger
+from derby.logger.helper import getLogger
 
-from derby import g_basename
-from derby import g_defaultlog
-from derby import g_identifier
-
-from derby import g_disabled
-from derby import g_memory
+from derby.configuration import g_basename
+from derby.configuration import g_defaultlog
+from derby.configuration import g_memory
 
 import traceback
 
@@ -52,6 +49,7 @@ import traceback
 g_ImplementationHelper = unohelper.ImplementationHelper()
 g_ImplementationName = 'io.github.prrvchr.DerbyOOo.OptionsHandler'
 g_ServiceNames = ("io.github.prrvchr.DerbyOOo.OptionsHandler", )
+
 
 class OptionsHandler(unohelper.Base,
                      XServiceInfo,
@@ -67,7 +65,7 @@ class OptionsHandler(unohelper.Base,
             handled = False
             if method == 'external_event':
                 if event == 'initialize':
-                    self._manager = OptionsManager(self._ctx, self._logger, window, g_disabled, g_memory)
+                    self._manager = OptionsManager(self._ctx, window, self._logger, g_memory)
                     handled = True
                 elif event == 'ok':
                     self._manager.saveSetting()
@@ -86,10 +84,13 @@ class OptionsHandler(unohelper.Base,
     # XServiceInfo
     def supportsService(self, service):
         return g_ImplementationHelper.supportsService(g_ImplementationName, service)
+
     def getImplementationName(self):
         return g_ImplementationName
+
     def getSupportedServiceNames(self):
         return g_ImplementationHelper.getSupportedServiceNames(g_ImplementationName)
+
 
 g_ImplementationHelper.addImplementation(OptionsHandler,                  # UNO object class
                                          g_ImplementationName,            # Implementation name
